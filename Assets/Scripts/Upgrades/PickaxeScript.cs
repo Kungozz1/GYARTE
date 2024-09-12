@@ -2,29 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
-
-public class Moneyscript : MonoBehaviour
+public class PickaxeScript : MonoBehaviour
 {
-    float current_money;
     [SerializeField]
-    TMP_Text coins;
+    GameObject button;
     [SerializeField]
-    float coinmultiplier;
+    GameObject Manager;
+    Moneyscript Mscript;
+    [SerializeField]
+    TMP_Text PickaxeLvl;
+    [SerializeField]
+    TMP_Text lvlcost;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinmultiplier = 1;
+        Mscript = Manager.GetComponent<Moneyscript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        coins.text = current_money.ToString();
+        
     }
-    public void onbuttonpress()
+    public void onButtonpress()
     {
-        current_money += 1 * coinmultiplier;
+
     }
 }
