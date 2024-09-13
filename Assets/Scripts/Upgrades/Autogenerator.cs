@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class Pickaxescript : MonoBehaviour
+public class Autogenerator : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
+    string name;
+    [SerializeField]
     Button button;
     [SerializeField]
     TMP_Text level;
     [SerializeField]
     TMP_Text lvlupcost;
-    [SerializeField] 
+    [SerializeField]
     float upgradecost;
     [SerializeField]
     float upgradelvl;
-    
-    
-
+    [SerializeField]
+    float CPS;
     [SerializeField]
     GameObject manager;
     Moneyscript mscript;
@@ -33,7 +34,7 @@ public class Pickaxescript : MonoBehaviour
     {
         level.text = upgradelvl.ToString();
         lvlupcost.text = upgradecost.ToString();
-        //mscript.coinclickmultiplier += 1;
+
     }
 
     public void onbuttonpress()
