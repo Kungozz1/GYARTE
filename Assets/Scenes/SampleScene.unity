@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1012.4, y: 442}
+  m_AnchoredPosition: {x: 1004, y: 442}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220949966
@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -85}
+  m_AnchoredPosition: {x: -25, y: -85}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299415683
@@ -384,14 +384,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27244809d69649445903ec8bcff3e977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  button: {fileID: 0}
-  level: {fileID: 0}
-  lvlupcost: {fileID: 0}
-  upgradecost: 0
+  moneytimer: 0
+  name: titanium pick
+  button: {fileID: 1044598945}
+  level: {fileID: 1938579744}
+  lvlupcost: {fileID: 1938579744}
+  upgradecost: 10
   upgradelvl: 0
   CPS: 0
-  manager: {fileID: 0}
+  manager: {fileID: 1543019315}
 --- !u!1 &371680826
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: 0}
+  m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
@@ -626,7 +627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 756, y: 438}
+  m_AnchoredPosition: {x: 747, y: 438}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550453504
@@ -866,7 +867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 756, y: 438}
+  m_AnchoredPosition: {x: 747, y: 438}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &785862860
@@ -1002,7 +1003,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 759, y: -36}
-  m_SizeDelta: {x: 500, y: 1200}
+  m_SizeDelta: {x: 650, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793819599
 MonoBehaviour:
@@ -1077,8 +1078,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 779, y: 440.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 808, y: 440.4}
+  m_SizeDelta: {x: 193, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871247299
 MonoBehaviour:
@@ -1093,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49411768, g: 0.48235297, b: 0.4666667, a: 1}
+  m_Color: {r: 0.78616345, g: 0.78616345, b: 0.78616345, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1143,7 +1144,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1162,9 +1163,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1543019315}
-        m_TargetAssemblyTypeName: Autogenerator, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1543019318}
+        m_TargetAssemblyTypeName: Pickaxescript, Assembly-CSharp
+        m_MethodName: onbuttonpress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1208,7 +1209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1012.4, y: 442}
+  m_AnchoredPosition: {x: 1004, y: 442}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959240223
@@ -1343,8 +1344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 779, y: 440.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 808, y: 440.4}
+  m_SizeDelta: {x: 193, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044598945
 MonoBehaviour:
@@ -1371,7 +1372,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.19496846, g: 0.19496846, b: 0.19496846, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1415,7 +1416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49411768, g: 0.48235297, b: 0.4666667, a: 1}
+  m_Color: {r: 0.7882353, g: 0.7882353, b: 0.7882353, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1678,6 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a47058f73e3ff041a075f7e62a12ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyperclick: 0
   current_money: 0
   coins: {fileID: 1981746223}
   coinmultiplier: 0
@@ -1712,7 +1714,7 @@ MonoBehaviour:
   button: {fileID: 871247301}
   level: {fileID: 220949966}
   lvlupcost: {fileID: 2113625692}
-  upgradecost: 0
+  upgradecost: 10
   upgradelvl: 0
   manager: {fileID: 1543019315}
 --- !u!114 &1543019319
@@ -1727,6 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27244809d69649445903ec8bcff3e977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneytimer: 0
   name: Titanium Pick
   button: {fileID: 1044598945}
   level: {fileID: 959240223}
@@ -1769,7 +1772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 643, y: 442}
+  m_AnchoredPosition: {x: 634.69995, y: 442}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673241042
@@ -2287,7 +2290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 794, y: 406}
+  m_AnchoredPosition: {x: 785.69995, y: 406}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113625692

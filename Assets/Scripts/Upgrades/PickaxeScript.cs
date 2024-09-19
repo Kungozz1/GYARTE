@@ -16,8 +16,8 @@ public class Pickaxescript : MonoBehaviour
     float upgradecost;
     [SerializeField]
     float upgradelvl;
-    
-    
+
+    int roundupcost;
 
     [SerializeField]
     GameObject manager;
@@ -32,15 +32,34 @@ public class Pickaxescript : MonoBehaviour
     void Update()
     {
         level.text = upgradelvl.ToString();
-        lvlupcost.text = upgradecost.ToString();
+        lvlupcost.text = roundupcost.ToString();
         //mscript.coinclickmultiplier += 1;
+        roundupcost = (int)(upgradecost + 0.5f);
+        if (upgradelvl >= 50)
+        {
+            level.text = "max";
+            button.interactable = false;
+        }
+
     }
 
     public void onbuttonpress()
     {
-        if (mscript.current_money > upgradecost)
+        if (mscript.current_money >= roundupcost)
         {
+            
             upgradelvl++;
+            mscript.current_money -= roundupcost;
+            upgradecost *= 1.1f;
+            mscript.moneyperclick += 1;
         }
     }
+    public void Givemoney()
+    {
+        mscript.current_money += mscript.moneyperclick;
+
+
+    }
+
+
 }

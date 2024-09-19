@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 
 public class Moneyscript : MonoBehaviour
 {
+    public float moneyperclick = 1;
     public float current_money;
     [SerializeField]
     TMP_Text coins;
@@ -19,6 +20,7 @@ public class Moneyscript : MonoBehaviour
     {
         coinclickmultiplier = 1;
         coinmultiplier = 1;
+        moneyperclick = 1;
     }
 
     // Update is called once per frame
@@ -28,6 +30,6 @@ public class Moneyscript : MonoBehaviour
     }
     public void onbuttonpress()
     {
-        current_money += 1 * coinclickmultiplier;
+        current_money += moneyperclick * coinclickmultiplier;
     }
 }
