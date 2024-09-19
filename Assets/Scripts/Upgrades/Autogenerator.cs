@@ -9,7 +9,7 @@ public class Autogenerator : MonoBehaviour
     [SerializeField]
     float moneytimer;
     [SerializeField]
-    string name;
+    string Name;
     [SerializeField]
     Button button;
     [SerializeField]
@@ -25,6 +25,10 @@ public class Autogenerator : MonoBehaviour
     [SerializeField]
     GameObject manager;
     Moneyscript mscript;
+    [SerializeField]
+    float CPSInc;
+    [SerializeField]
+    float upgradeinc;
 
 
     int roundupcost;
@@ -43,7 +47,7 @@ public class Autogenerator : MonoBehaviour
         moneytimer += Time.deltaTime;
         level.text = upgradelvl.ToString();
         lvlupcost.text = roundupcost.ToString();
-        CPS = 15 * upgradelvl;
+        CPS = CPSInc * upgradelvl;
         autoMoney();
 
         if (upgradelvl >= 50)
@@ -59,7 +63,7 @@ public class Autogenerator : MonoBehaviour
         {
             upgradelvl++;
             mscript.current_money -= roundupcost;
-            upgradecost *= 1.3f;
+            upgradecost *= upgradeinc;
             
         }
     }
