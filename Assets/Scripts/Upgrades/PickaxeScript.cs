@@ -35,7 +35,7 @@ public class Pickaxescript : MonoBehaviour
         lvlupcost.text = roundupcost.ToString();
         //mscript.coinclickmultiplier += 1;
         roundupcost = (int)(upgradecost + 0.5f);
-        if (upgradelvl >= 50)
+        if (upgradelvl >= 200)
         {
             level.text = "max";
             button.interactable = false;
