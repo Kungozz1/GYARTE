@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Autogenerator : MonoBehaviour
 {
     [SerializeField]
-    float moneytimer;
+    public float moneytimer;
     [SerializeField]
     string Name;
     [SerializeField]
@@ -21,7 +21,7 @@ public class Autogenerator : MonoBehaviour
     [SerializeField]
     float upgradelvl;
     [SerializeField]
-    float CPS;
+    public float CPS;
     [SerializeField]
     GameObject manager;
     Moneyscript mscript;
@@ -31,8 +31,8 @@ public class Autogenerator : MonoBehaviour
     float upgradeinc;
 
 
-    int roundupcost;
-    int roundupcps;
+    public int roundupcost;
+    public int roundupcps;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +48,7 @@ public class Autogenerator : MonoBehaviour
         level.text = upgradelvl.ToString();
         lvlupcost.text = roundupcost.ToString();
         CPS = CPSInc * upgradelvl;
+
         autoMoney();
 
         if (upgradelvl >= 50)
@@ -57,7 +58,7 @@ public class Autogenerator : MonoBehaviour
         }
     }
 
-    public void onbuttonpress()
+    public void genonbuttonpress()
     {
         if (mscript.current_money >= upgradecost)
         {
@@ -67,6 +68,7 @@ public class Autogenerator : MonoBehaviour
             
         }
     }
+
 
     public void autoMoney()
     {

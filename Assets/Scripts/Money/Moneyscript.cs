@@ -14,6 +14,8 @@ public class Moneyscript : MonoBehaviour
    public float coinmultiplier;
     [SerializeField]
     public float coinclickmultiplier;
+    Autogenerator autogen;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,4 +34,7 @@ public class Moneyscript : MonoBehaviour
     {
         current_money += moneyperclick * coinclickmultiplier;
     }
+
+
+    
 }
