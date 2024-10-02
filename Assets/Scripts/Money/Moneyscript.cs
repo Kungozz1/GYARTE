@@ -16,6 +16,7 @@ public class Moneyscript : MonoBehaviour
     public float coinclickmultiplier;
     Autogenerator autogen;
     
+    
 
     // Start is called before the first frame update
     void Start()

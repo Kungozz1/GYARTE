@@ -30,6 +30,7 @@ public class Autogenerator : MonoBehaviour
     [SerializeField]
     float upgradeinc;
 
+    Upgradescript upgscript;
 
     public int roundupcost;
     public int roundupcps;
@@ -37,13 +38,14 @@ public class Autogenerator : MonoBehaviour
     void Start()
     {
         mscript = manager.GetComponent<Moneyscript>();
+        upgscript = GetComponent<Upgradescript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        roundupcost = (int)(upgradecost + 0.5f);
-        roundupcps = (int)(CPS + 0.5f);
+        roundupcost = (int)(upgradecost  + 0.5f);
+        roundupcps = (int)(CPS * upgscript.cpsboost + 0.5f);
         moneytimer += Time.deltaTime;
         level.text = upgradelvl.ToString();
         lvlupcost.text = roundupcost.ToString();
