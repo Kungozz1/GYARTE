@@ -13,19 +13,24 @@ public class Upgradescript : MonoBehaviour
     [SerializeField]
     float upgradeincrease = 1.2f;
     Moneyscript mscript;
+    Pickaxescript pickscript;
    public  float cpsboost = 1;
     [SerializeField]
     public float upgradecost;
     int upgradelevel = 0;
     [SerializeField]
     float inccps;
+    [SerializeField]
+    public float drillinccps;
+    public float drillLevel;
     // Start is called before the first frame update
     void Start()
     {
         cpsboost = 1;
         mscript = GetComponent<Moneyscript>();
+        pickscript = GetComponent<Pickaxescript>();
         upgradelevel = 0;
-        
+        drillinccps = 1;
     }
 
     // Update is called once per frame
@@ -39,6 +44,7 @@ public class Upgradescript : MonoBehaviour
 
 
         superupgradelevel.text = upgradelevel.ToString();
+        
     }
 
     public void boostonbuttonpress()
@@ -50,5 +56,22 @@ public class Upgradescript : MonoBehaviour
             upgradecost *= upgradeincrease;
 
         }
+    }
+    public void Drilluppgrade()
+    {
+        if (mscript.current_money >= roundupcost)
+        {
+
+            upgradelevel++;
+            if (upgradelevel >= 1)
+            {
+                mscript.coinclickmultiplier = 1 * upgradelevel; 
+
+            }
+            
+            mscript.current_money -= roundupcost;
+            upgradecost *= upgradeincrease;
+        }
+
     }
 }

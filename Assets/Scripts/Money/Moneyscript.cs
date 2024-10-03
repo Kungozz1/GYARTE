@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using JetBrains.Annotations;
 
 public class Moneyscript : MonoBehaviour
 {
@@ -15,12 +16,14 @@ public class Moneyscript : MonoBehaviour
     [SerializeField]
     public float coinclickmultiplier;
     Autogenerator autogen;
-    
-    
+    Upgradescript upgradescript;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        upgradescript = GetComponent<Upgradescript>();
         coinclickmultiplier = 1;
         coinmultiplier = 1;
         moneyperclick = 1;

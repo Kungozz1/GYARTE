@@ -22,15 +22,19 @@ public class Pickaxescript : MonoBehaviour
     [SerializeField]
     GameObject manager;
     Moneyscript mscript;
+    Upgradescript upgradescript;
     // Start is called before the first frame update
     void Start()
     {
         mscript = manager.GetComponent<Moneyscript>();
+        upgradescript = GetComponent<Upgradescript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
         level.text = upgradelvl.ToString();
         lvlupcost.text = roundupcost.ToString();
         //mscript.coinclickmultiplier += 1;
@@ -56,7 +60,7 @@ public class Pickaxescript : MonoBehaviour
     }
     public void Givemoney()
     {
-        mscript.current_money += mscript.moneyperclick;
+        mscript.current_money += mscript.moneyperclick * upgradescript.drillLevel;
 
 
     }
