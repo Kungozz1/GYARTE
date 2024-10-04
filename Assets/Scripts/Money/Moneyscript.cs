@@ -12,6 +12,8 @@ public class Moneyscript : MonoBehaviour
     [SerializeField]
     TMP_Text coins;
     [SerializeField]
+    TMP_Text gambling_coins;
+    [SerializeField]
    public float coinmultiplier;
     [SerializeField]
     public float coinclickmultiplier;
@@ -33,6 +35,7 @@ public class Moneyscript : MonoBehaviour
     void Update()
     {
         coins.text = current_money.ToString();
+        gambling_coins.text = current_money.ToString();
     }
     public void onbuttonpress()
     {

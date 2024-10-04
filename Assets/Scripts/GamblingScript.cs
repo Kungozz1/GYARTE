@@ -7,6 +7,9 @@ using System;
 
 public class GamblingScript : MonoBehaviour
 {
+
+    [SerializeField]
+    TMP_Text gambling_button;
     [SerializeField]
     GameObject manager;
     [SerializeField]
@@ -17,8 +20,14 @@ public class GamblingScript : MonoBehaviour
     [SerializeField]
     Button button;
     [SerializeField]
-    float odds;
+    int Lucky_number;
     Moneyscript mscript;
+    [SerializeField]
+    int num1;
+    [SerializeField]
+    int num2;
+    [SerializeField]
+    float winnings;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +39,7 @@ public class GamblingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        gambling_button.text = "Gamble "+gambling_price.ToString()+" Gold";
     }
     public void gambling()
     {
@@ -39,14 +48,14 @@ public class GamblingScript : MonoBehaviour
             mscript.current_money -= gambling_price;
         }
         
-        rng = UnityEngine.Random.Range(1,1001);
+        rng = UnityEngine.Random.Range(num1,num2);
         print(rng);
 
 
-        if (rng == odds)
+        if (rng == Lucky_number)
         {
-            print("yayyy");
-            mscript.current_money += 1000;
+            print("yayyy you won "+winnings +" Gold") ;
+            mscript.current_money += winnings;
         }
 
 
