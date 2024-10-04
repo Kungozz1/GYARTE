@@ -5667,7 +5667,7 @@ MonoBehaviour:
   Gamblingmanager: {fileID: 2137799131}
   gambling_price: 1
   button: {fileID: 1153135373}
-  Lucky_number: 0
+  Lucky_number: 1
   num1: 18
   num2: 199
   winnings: 150
@@ -5703,7 +5703,7 @@ MonoBehaviour:
   Gamblingmanager: {fileID: 2137799131}
   gambling_price: 50
   button: {fileID: 1770648903}
-  Lucky_number: 0
+  Lucky_number: 1
   num1: 1
   num2: 16
   winnings: 750
