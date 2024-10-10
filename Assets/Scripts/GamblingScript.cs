@@ -4,10 +4,16 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using System.Linq;
 
 public class GamblingScript : MonoBehaviour
 {
-
+    [SerializeField]
+    GameObject gamblingcanvas;
+    
+    
+    [SerializeField]
+    float gambling_timer;
     [SerializeField]
     TMP_Text gambling_button;
     [SerializeField]
@@ -20,12 +26,13 @@ public class GamblingScript : MonoBehaviour
     [SerializeField]
     Button button;
     [SerializeField]
+    [Range(1,16)]
     int Lucky_number;
     Moneyscript mscript;
     [SerializeField]
-    int num1;
+    public int num1;
     [SerializeField]
-    int num2;
+   public  int num2;
     [SerializeField]
     float winnings;
 
@@ -34,12 +41,20 @@ public class GamblingScript : MonoBehaviour
     {
         mscript = manager.GetComponent<Moneyscript>();
         
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+        
+        
+
+        gambling_timer += Time.deltaTime;
         gambling_button.text = "Gamble "+gambling_price.ToString()+" Gold";
+
     }
     public void gambling()
     {
@@ -60,4 +75,6 @@ public class GamblingScript : MonoBehaviour
 
 
     }
+    
+
 }

@@ -5662,12 +5662,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1962f95e73824b8969b6d633975d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamblingcanvas: {fileID: 1625746971}
+  isgambling: 0
+  gambling_timer: 0
   gambling_button: {fileID: 1901493086}
   manager: {fileID: 1543019315}
   Gamblingmanager: {fileID: 2137799131}
   gambling_price: 1
   button: {fileID: 1153135373}
-  Lucky_number: 1
+  Lucky_number: 6
   num1: 18
   num2: 199
   winnings: 150
@@ -5698,6 +5701,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1962f95e73824b8969b6d633975d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamblingcanvas: {fileID: 1625746971}
+  isgambling: 0
+  gambling_timer: 0
   gambling_button: {fileID: 874099606}
   manager: {fileID: 1543019315}
   Gamblingmanager: {fileID: 2137799131}
