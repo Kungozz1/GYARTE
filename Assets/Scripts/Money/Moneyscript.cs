@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using JetBrains.Annotations;
+using System.Globalization;
 
 public class Moneyscript : MonoBehaviour
 {
@@ -34,8 +35,33 @@ public class Moneyscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coins.text = current_money.ToString();
-        gambling_coins.text = current_money.ToString();
+        if (current_money >=1000 && current_money< 1000000)
+        {
+            coins.text = current_money.ToString("#,#,K", CultureInfo.InvariantCulture);
+        }
+        else 
+        {
+            if (current_money >= 1000000 && current_money < 1000000000)
+            {
+                coins.text = current_money.ToString("#,#,0,M", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                if (current_money >= 1000000000)
+                {
+                    coins.text = current_money.ToString("#,##0,,,B", CultureInfo.InvariantCulture);
+                   
+                }
+                else
+                {
+                    coins.text = current_money.ToString();
+                }
+            }
+           
+        }
+           
+        
+        gambling_coins.text = current_money.ToString("#,##0,,,B", CultureInfo.InvariantCulture);
     }
     public void onbuttonpress()
     {
@@ -44,4 +70,11 @@ public class Moneyscript : MonoBehaviour
 
 
     
+
+
+
 }
+/* else
+{
+    coins.text = current_money.ToString();
+}*/

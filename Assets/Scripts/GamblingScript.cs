@@ -61,17 +61,19 @@ public class GamblingScript : MonoBehaviour
         if (mscript.current_money >= gambling_price)
         {
             mscript.current_money -= gambling_price;
+
+            rng = UnityEngine.Random.Range(num1, num2);
+            print(rng);
+
+
+            if (rng == Lucky_number)
+            {
+                print("yayyy you won " + winnings + " Gold");
+                mscript.current_money += winnings;
+            }
         }
         
-        rng = UnityEngine.Random.Range(num1,num2);
-        print(rng);
-
-
-        if (rng == Lucky_number)
-        {
-            print("yayyy you won "+winnings +" Gold") ;
-            mscript.current_money += winnings;
-        }
+        
 
 
     }
