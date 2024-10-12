@@ -61,19 +61,19 @@ public class Moneyscript : MonoBehaviour
         }
         if (current_money >= 1000 && current_money < 1000000)
         {
-            gambling_coins.text = current_money.ToString("#,#,0K", CultureInfo.InvariantCulture);
+            gambling_coins.text = (current_money / 1000).ToString("#.0K", CultureInfo.InvariantCulture);
         }
         else
         {
             if (current_money >= 1000000 && current_money < 1000000000)
             {
-                gambling_coins.text = current_money.ToString("#,#,0,M", CultureInfo.InvariantCulture);
+                gambling_coins.text = (current_money / 1000000).ToString("#.0M", CultureInfo.InvariantCulture);
             }
             else
             {
                 if (current_money >= 1000000000)
                 {
-                    gambling_coins.text = current_money.ToString("#,##0,,,B", CultureInfo.InvariantCulture);
+                    gambling_coins.text = (current_money / 1000000000).ToString("#.0B", CultureInfo.InvariantCulture);
 
                 }
                 else
