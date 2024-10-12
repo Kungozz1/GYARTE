@@ -4025,7 +4025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyperclick: 0
-  current_money: 0
+  current_money: 999
   coins: {fileID: 1981746223}
   gambling_coins: {fileID: 758915630}
   coinmultiplier: 0

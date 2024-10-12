@@ -37,19 +37,19 @@ public class Moneyscript : MonoBehaviour
     {
         if (current_money >=1000 && current_money< 1000000)
         {
-            coins.text = current_money.ToString("#,#,K", CultureInfo.InvariantCulture);
+            coins.text = (current_money/1000).ToString("#.0K", CultureInfo.InvariantCulture);
         }
         else 
         {
             if (current_money >= 1000000 && current_money < 1000000000)
             {
-                coins.text = current_money.ToString("#,#,0,M", CultureInfo.InvariantCulture);
+                coins.text = (current_money/1000000).ToString("#.0M", CultureInfo.InvariantCulture);
             }
             else
             {
                 if (current_money >= 1000000000)
                 {
-                    coins.text = current_money.ToString("#,##0,,,B", CultureInfo.InvariantCulture);
+                    coins.text = (current_money/1000000000).ToString("#.0B", CultureInfo.InvariantCulture);
                    
                 }
                 else
@@ -59,9 +59,32 @@ public class Moneyscript : MonoBehaviour
             }
            
         }
-           
-        
-        gambling_coins.text = current_money.ToString("#,##0,,,B", CultureInfo.InvariantCulture);
+        if (current_money >= 1000 && current_money < 1000000)
+        {
+            gambling_coins.text = current_money.ToString("#,#,0K", CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            if (current_money >= 1000000 && current_money < 1000000000)
+            {
+                gambling_coins.text = current_money.ToString("#,#,0,M", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                if (current_money >= 1000000000)
+                {
+                    gambling_coins.text = current_money.ToString("#,##0,,,B", CultureInfo.InvariantCulture);
+
+                }
+                else
+                {
+                    gambling_coins.text = current_money.ToString();
+                }
+            }
+
+        }
+
+
     }
     public void onbuttonpress()
     {
@@ -74,7 +97,3 @@ public class Moneyscript : MonoBehaviour
 
 
 }
-/* else
-{
-    coins.text = current_money.ToString();
-}*/
