@@ -23,6 +23,8 @@ public class Upgradescript : MonoBehaviour
     [SerializeField]
     public float drillinccps;
     public float drillLevel;
+    [SerializeField]
+    TMP_Text lvlupcosttext;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +42,14 @@ public class Upgradescript : MonoBehaviour
         roundupcost = (int)(upgradecost * upgradeincrease + 0.5f);
         
         cpsboost = Mathf.Pow(inccps, upgradelevel);
-        
+        lvlupcosttext.text = roundupcost.ToString();
 
 
         superupgradelevel.text = upgradelevel.ToString();
-        
+        if (roundupcost >=1000000)
+        {
+
+        }
     }
 
     public void boostonbuttonpress()
