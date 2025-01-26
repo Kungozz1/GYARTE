@@ -55,12 +55,12 @@ public class TimerScript : MonoBehaviour
         EndScreen.SetActive(true); 
         Maingamepanel.SetActive(false);
         StartCoroutine("yes");
-        
+
         
     }
    public IEnumerator yes()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         manager.SetActive(false);
     }
 
