@@ -67,7 +67,7 @@ public class Autogenerator : MonoBehaviour
             upgradelvl++;
             mscript.current_money -= roundupcost;
             upgradecost *= upgradeinc;
-            
+            mscript.TotalMoneyEarned += roundupcost;
         }
     }
 
@@ -78,6 +78,7 @@ public class Autogenerator : MonoBehaviour
         {
             mscript.current_money += roundupcps / 10;
             moneytimer = 0;
+            mscript.TotalMoneyEarned += roundupcps/10;
         }
 
     }

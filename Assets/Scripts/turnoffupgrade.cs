@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEditor;
+using System;
 
 public class turnoffupgrade : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class turnoffupgrade : MonoBehaviour
     {
         sidepanel.SetActive(!sidepanel.activeSelf);
         gamblingpanel.SetActive(!gamblingpanel.activeSelf);
-
+        
 
     }
 }

@@ -56,6 +56,7 @@ public class Pickaxescript : MonoBehaviour
             mscript.current_money -= roundupcost;
             upgradecost *= 1.1f;
             mscript.moneyperclick += 1;
+            mscript.TotalMoneyEarned += roundupcost;
         }
     }
     public void Givemoney()

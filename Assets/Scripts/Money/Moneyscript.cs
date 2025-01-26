@@ -8,8 +8,9 @@ using System.Globalization;
 
 public class Moneyscript : MonoBehaviour
 {
+    public float TotalMoneyEarned;
     public float moneyperclick = 1;
-    public float current_money;
+    public float current_money ;
     [SerializeField]
     TMP_Text coins;
     [SerializeField]
@@ -26,6 +27,7 @@ public class Moneyscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+     
         upgradescript = GetComponent<Upgradescript>();
         coinclickmultiplier = 1;
         coinmultiplier = 1;
@@ -35,6 +37,11 @@ public class Moneyscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (current_money <1000)
+        {
+            coins.text = ("0000"+current_money.ToString());
+
+        }
         if (current_money >=1000 && current_money< 1000000)
         {
             coins.text = (current_money/1000).ToString("#.0K", CultureInfo.InvariantCulture);
@@ -89,6 +96,7 @@ public class Moneyscript : MonoBehaviour
     public void onbuttonpress()
     {
         current_money += moneyperclick * coinclickmultiplier;
+        TotalMoneyEarned += moneyperclick * coinclickmultiplier;
     }
 
 

@@ -43,6 +43,7 @@ public class Upgradescript : MonoBehaviour
         
         cpsboost = Mathf.Pow(inccps, upgradelevel);
         lvlupcosttext.text = roundupcost.ToString();
+       
 
 
         superupgradelevel.text = upgradelevel.ToString();
@@ -59,6 +60,8 @@ public class Upgradescript : MonoBehaviour
             upgradelevel++;
             mscript.current_money -= roundupcost;
             upgradecost *= upgradeincrease;
+            mscript.TotalMoneyEarned += roundupcost;
+
 
         }
     }
