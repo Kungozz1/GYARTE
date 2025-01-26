@@ -5,6 +5,10 @@ using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
+
+    [SerializeField]
+    GameObject Maingamepanel;
+    turnoffupgrade turnoffscript;
     [SerializeField]
     TMP_Text Score;
     [SerializeField]
@@ -18,6 +22,7 @@ public class TimerScript : MonoBehaviour
     TMP_Text TimerText;
     [SerializeField]
     float Timer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +52,16 @@ public class TimerScript : MonoBehaviour
         void EndGame()
     {
         mscript.TotalMoneyEarned = mscript.TotalMoneyEarned += mscript.current_money;
-        EndScreen.SetActive(true);
+        EndScreen.SetActive(true); 
+        Maingamepanel.SetActive(false);
+        StartCoroutine("yes");
+        
+        
     }
+   public IEnumerator yes()
+    {
+        yield return new WaitForSeconds(1);
+        manager.SetActive(false);
+    }
+
 }

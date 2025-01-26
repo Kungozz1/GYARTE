@@ -9,6 +9,8 @@ using System;
 public class turnoffupgrade : MonoBehaviour
 {
     [SerializeField]
+    GameObject Scorepanel;
+    [SerializeField]
     GameObject gamblingpanel;
     [SerializeField]
     GameObject sidepanel;
@@ -32,4 +34,5 @@ public class turnoffupgrade : MonoBehaviour
         
 
     }
+    
 }

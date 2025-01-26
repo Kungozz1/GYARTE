@@ -21,7 +21,8 @@ public class Moneyscript : MonoBehaviour
     public float coinclickmultiplier;
     Autogenerator autogen;
     Upgradescript upgradescript;
-
+    [SerializeField] 
+    public float Coinaudio;
 
 
     // Start is called before the first frame update
@@ -96,7 +97,7 @@ public class Moneyscript : MonoBehaviour
     public void onbuttonpress()
     {
         current_money += moneyperclick * coinclickmultiplier;
-        TotalMoneyEarned += moneyperclick * coinclickmultiplier;
+        Coinaudio += moneyperclick* coinclickmultiplier;
     }
 
 

@@ -79,6 +79,7 @@ public class Autogenerator : MonoBehaviour
             mscript.current_money += roundupcps / 10;
             moneytimer = 0;
             mscript.TotalMoneyEarned += roundupcps/10;
+            mscript.Coinaudio += roundupcps / 10;
         }
 
     }
