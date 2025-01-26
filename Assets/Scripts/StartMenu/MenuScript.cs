@@ -10,17 +10,7 @@ public class MenuScript : MonoBehaviour
     
 
 
-// Start is called before the first frame update
-void Start()
-{
 
-}
-
-// Update is called once per frame
-void Update()
-{
-
-}
     public void Play() //när den här voiden händer, t.ex. när man trycker på en knapp, så loadar den scenen som heter mainScene
     {
         SceneManager.LoadScene("GameScene");
@@ -33,7 +23,10 @@ void Update()
     }
 
 
-
+    public void MainMeny() 
+    {
+        SceneManager.LoadScene("Start scene");
+    }
 
 
 
