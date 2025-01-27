@@ -7077,7 +7077,7 @@ MonoBehaviour:
   manager: {fileID: 1543019315}
   EndScreen: {fileID: 1789108548}
   TimerText: {fileID: 325055667}
-  Timer: 300
+  Timer: 10
 --- !u!114 &1543019325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8235,7 +8235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1e765bc33bc70814da8a18454a5ac87e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb9e494e7dd18ae48846444c3af5b5ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
