@@ -38,11 +38,7 @@ public class Moneyscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (current_money <1000)
-        {
-            coins.text = ("0000"+current_money.ToString());
-
-        }
+       
         if (current_money >=1000 && current_money< 1000000)
         {
             coins.text = (current_money/1000).ToString("#.0K", CultureInfo.InvariantCulture);
