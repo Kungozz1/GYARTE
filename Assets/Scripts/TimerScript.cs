@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Globalization;
 
 public class TimerScript : MonoBehaviour
 {
@@ -40,7 +41,23 @@ public class TimerScript : MonoBehaviour
         Timer -= Time.deltaTime;
         TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        Score.text = mscript.TotalMoneyEarned.ToString();
+        
+        if (mscript.TotalMoneyEarned >= 000 && mscript.TotalMoneyEarned <= 1000000)
+        {
+            Score.text = (mscript.TotalMoneyEarned / 1000).ToString("#.0K", CultureInfo.InvariantCulture);
+        }
+        else if (mscript.TotalMoneyEarned >= 1000000 && mscript.TotalMoneyEarned  <= 1000000000)
+        {
+            Score.text = (mscript.TotalMoneyEarned / 1000000).ToString("#.0M", CultureInfo.InvariantCulture);
+        }
+        else if (mscript.TotalMoneyEarned >= 1000000000)
+        {
+            Score.text = (mscript.TotalMoneyEarned / 1000000000).ToString("#.0B", CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            Score.text = mscript.TotalMoneyEarned.ToString();
+        }
         if (Timer <=0)
         {
             Timer = 1000000000;
