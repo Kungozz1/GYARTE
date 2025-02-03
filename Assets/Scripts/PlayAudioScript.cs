@@ -21,7 +21,7 @@ public class PlayAudioScript : MonoBehaviour
         if (moneyscript.current_money <= 10000)
         {
             if (moneyscript.Coinaudio >= 500)
-            {
+           { 
                 AudioSource.PlayOneShot(clip);
                 moneyscript.Coinaudio = 0;
             }
